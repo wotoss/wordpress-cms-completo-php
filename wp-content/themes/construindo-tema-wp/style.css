@@ -1,0 +1,535 @@
+/*
+Theme Name: woto-informatica;
+Theme URI: https://cursos.dankicode.com;
+Theme URI: https://woto.informatica.com;
+Description: Desenvolvimento de tema para o wordpress
+Version: 1.0;
+*/
+
+
+/*esta é a configuração de toda (*) pagina do meu tema*/
+/*este é o reset ou seja o inicio de nossa pagian (*)*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto";
+ }
+
+.center{
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+/* 1º coisa que vou fazer é esconder este menu pois não estou no mobile e sim na tela co pc*/
+/* veja que fiz outra configuração para quando entrar no 768px mobile*/
+.menu-mobile{
+	display: none;
+}
+/*menu ficará a direita => quando responsivo => tela 768px;*/
+.menu-mobile{
+	float: right;
+}
+/*estilizando o icone*/
+.menu-mobile i{
+	font-size: 33px;
+	color: white;
+	cursor: pointer;
+}
+/*esta estilização no ul e que deixa o menu mobile abaixo 768px em toda a tela*/
+.menu-mobile ul{
+	left: 0;
+	top: 77px; /*distanciamento do nosso menu mobile referente ao topo da pagina*/
+	display: none;
+	width: 100%;
+	position: absolute;
+	list-style-type: none; /*para tirar as bolinhas do lado ou (bullet)*/
+}
+
+/*estou estilizando o texto dentro da li*/
+.menu-mobile li{
+	padding: 8px 0; /*este padding 8px esta distanciando em cima e em baixo e o 0 nada nas laterais direita e esquerda*/
+	text-align: center;
+	display: block;
+	width: 100%;
+	background: white; /*vou deixar o meu mobile abaixo dos 768px; em branco*/
+	border-bottom: 1px solid #00f9f7;
+}
+
+.menu-mobile a{
+	display: block; /*quando eu ponho display:block => o efeito fica para todo o bloco => exemplo => cursor point*/
+	text-decoration: none;
+	color: #202020;
+}
+
+/*inicio => configuração de toda a sessão inicial => menu*/
+section.topo {
+	background-image: linear-gradient(114deg, #250e8a, #00f9f7);
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
+/*vai ser usado flutuação e não flexbox=> será dado o clear para evitar conflitos*/
+
+.clear{clear: both;}
+
+
+/*veja que a class="logo" terá a flutuação a esqueda*/
+.logo{ 
+	float: left;
+}
+
+/*veja que a class="menu-desktop" terá a flutuação a direita*/
+.menu-desktop{
+	float: right;
+}
+
+.menu-desktop li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/*estilizando ou personalizando o link a */
+.menu-desktop a{
+	text-decoration: none;
+	color: white;
+	opacity: 0.6;
+}
+/*usando hover quando passar o mouse por cima*/
+.menu-desktop a:hover{
+	opacity: 1;
+}
+
+/*fim => configuração de toda a sessão inicial => menu*/
+
+/*
+   Classes auxiliares
+*/
+
+.w50{
+/*isto fará com que pegue 50% da tela*/	
+ float: left; width: 50%; 
+ padding:  0 15px; 
+
+}
+/*quando a imagem estiver altrapassando => maior que a tela*/
+/*técnica para deixar sempre responsivo e não quebrar.*/
+.time-imagem img{
+	max-width: 100%;
+}
+
+
+.time-descricao{
+	margin-top: 50px;
+	color: white;
+}
+.time-descricao h2{
+	font-size: 45px;
+}
+.time-descricao p{
+	font-size: 14px;
+	margin-top: 10px;
+	max-width: 240px;
+}
+.time-descricao a {
+	display: inline-block;
+	margin-top: 14px;
+	padding: 10px 8px;
+	text-decoration: none;
+	color: #1b49a5;
+	font-weight: bold;
+	border-radius: 8px;
+	background: #ffca00;
+	box-shadow: 0 20px 30px 0 rgba(37, 15, 138, 0.2);
+}
+
+/*inicio - configuração icone fontawasean*/
+.circle{
+	position: absolute;
+	left: 50%;
+	margin-top: -20px;
+	/*transform => centralizar 100%*/
+	transform: translateX(-50%);
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	box-shadow: 0 10px 25px 0 rgba(37, 15, 139, 0.1);
+}
+.circle i{
+	position: relative;
+	top: 5px;
+	font-size: 30px;
+	color: #1c4aa6;
+}
+/*fim */
+
+section.clientes-slider{
+	padding: 60px 0;
+}
+
+section.clientes-slider img{padding:0 20px;}
+/*inicio Slick Slider*/
+  .slick-dotted ul{
+  	list-style-type: none;
+  	text-align: center;
+  	position: relative;
+  	margin-top: 10px;
+  }
+  .slick-dotted li{
+  	display: inline-block;
+  	margin: 0 7px;
+  }
+  .slick-dotted button:focus{
+  	outline: 0;
+  }
+  .slick-dotted li button{
+  	width: 16px;
+  	height: 16px;
+  	border-radius: 8px;
+  	color: #d8d8d8;
+  	border-width: 0;
+  	background: #d8d8d8;
+  	opacity: 1;
+  	cursor: pointer;
+  }
+  /*active => é a bolinha que esta ativa*/
+  li.slick-active button{
+    background: #0c3f8a;
+    color: #0c3f8a;
+  }
+
+  /*inicio seção diferenciais images
+    espaçamento de uma seção para outra.
+  */
+   section.diferenciais{
+   	 padding: 30px 0;
+   }
+
+   section.diferenciais h2 {
+   	 color: #202020;
+   	 font-size: 30px;
+   	 font-weight: normal;
+     text-align: center;
+   }
+
+   /*posso colocar div para chamar a classe ou somente a classe (.)*/
+   div.icons-diferenciais{
+   	  display: flex; /*display flex ele ajusta automaticamente*/
+   	  flex-wrap: wrap; /*wrap => siginifica se não tiver espaço cai para proxima linha*/
+      margin-top: 80px;/*deixar longe do topo da outra seção anterior*/
+
+   }
+   div.box-single-diferenciais{
+   	text-align: center;
+    width: 33.3%; /*seria a divisão de cada imagem, no espaçamento da tela totalizando 100%*/
+    padding:0 10px; /*espaçamento => 0 não queremos nada de cima para baixo => 10px espaçamento nas laterais.*/
+   }
+
+   /*dentro dos diferenciais trabalhar o responsivo*/
+    div.box-single-diferenciais img{
+    	max-width: 100%;
+    }
+
+   /*fim trabalhar o responsivo img*/
+
+   /*veja que não coloquei a (div) e ele aceitou, comente a class (.) direto*/
+   .box-single-diferenciais h3 {
+   	 font-size: 17px;
+   	 margin: 10 0; /*dar uma margim de 10 0 apenas para não ficar grudado ou junto*/
+   	 font-weight: bold;/*lembrando que o bold (negrito) é o padrão do navegador no h3 => então posso tirar se quiser*/
+   	 color: #202020;
+   }
+
+   .box-single-diferenciais p{
+   	 font-size: 14px;
+   	 color: #202020;
+   }
+
+  /*fim seção diferenciais images*/
+
+/*Fim Slick Slider*/
+
+
+/*iniciar a sessão time de trabalho tela azul claro*/
+
+section.sobre-time{
+	padding: 40px 0; /*seria um espaçamento em superior e em inferior => 0 á esquerda e direita*/
+	background-color: #f4f9fd;
+}
+
+.img-time img{max-width: 100%}
+
+.time-descricao-2{
+	padding: 0 20px; /*espaçamento na parte inferior e superior é 0 => já na esquerda e direita 20px; */
+}
+
+.time-descricao-2 h2{
+	color: #202020;
+	line-height: 35px; /* line-height => é uma distância entre as linhas*/
+	font-size: 24px;
+	margin-bottom: 30px; /*margin-bottom => para manter uma distância dou outro texto => no caso o (tituto e o texto)*/
+}
+
+.time-descricao-2 p{
+	color: #272727;
+	padding-right: 30px; /*padding-right => distanciar ou espaçamento a direita o paragrafo da outra imagem*/
+	font-size: 15px;
+}
+
+
+/*fechar a sessão de trabalho*/
+
+/* iniciar => sessão depoimento */
+section.depoimentos{
+	padding: 100px 0px; /*espaçamento => 100px na parte inferior e superior. 0 a direita e esquerda*/
+	background-color: #23188f;
+}
+
+section.depoimentos h2{
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 30px;
+}
+.depoimentos-box {
+	margin:10px auto;
+	max-width: 800px;
+	overflow: hidden;
+	width: 100%;
+	display: block;
+}
+.depoimentos-single{width: 100%; display: inline-block;}
+.depoimentos-single p{ text-align: center; margin-bottom: 15px; color: white;}
+.depoimentos-box img{
+	width: 100px; /*width => comprimento =>configurar o tamanho da foto*/
+	height: 100px; /*height => altura =>configurar o tamanho da foto*/
+	display: block;
+	margin: 10px auto; /*margin => estando com auto => ele centraliza*/
+	border-radius: 50%; /*deixando as bordas arredondadas*/
+}
+
+/* fechar depoimento*/
+
+/* inicio rodapé*/
+
+section.metodologia{
+	position: absolute; 
+	/*z-index: 10 é o maior valor =>*/
+	z-index: 10;/* para garantir que sempre vai ficar na parte de cima => independente do navegador*/
+	top:-40px; /*top:-40px; => seria o valor correspondente que vai subir => nossa tela em branca.*/
+	left: 50%; /*quando dou o left a minha tela vai até o meio ou centro*/
+	width: 100%; /*dentro de uma largura que é 100%*/
+	transform: translateX(-50%); /*dai eu dou um translateX(-50%) ele encontra o eixo*/
+
+    /*estas 5 propriedades de cima que fazem a tela subir*/
+
+	max-width: 940px; /*max-width => tamanho da tela 940px; com efeito em branco*/
+	margin: 0 auto;
+	padding: 40px 0;
+
+	background: white;
+	border-top: 3px solid #ffca00;
+	box-shadow: 10px 20px 60px 0 rgba(0, 0, 0, 0.06);
+	text-align: center;
+}
+
+section.metodologia h2{
+	color: #232931;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+section.metodologia p{
+	font-size: 14px;
+	color: #b4b4b4;
+	margin: 15px 0;
+}
+
+/*esta é a estilização do link mas poderia ser um botão*/
+section.metodologia a{
+	text-decoration: none; /*todo link (a) vem sublinhado então a gosto eu retiro => text-decoration: none; */
+    color: white;
+    padding: 8px 15px; /*terá um espaçamento de 4px superior e inferior e 10px a esquerda e direita*/
+    background-color: #23188f;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 8px;
+}
+/*fim - rodapé*/
+footer{
+	position: relative;
+	padding-top: 300px;
+	padding-bottom: 100px;
+	background: white;
+}
+
+footer > .center{
+	display: flex; /*vai alinhar*/
+	flex-wrap: wrap; /*quando acabar vai colocar em baixo*/
+}
+
+.col-footer{
+	width: 20%;
+}
+.col-footer h2{
+    color: #232931;
+    font-size: 13px;
+    font-weight: normal; 
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.col-footer a{
+	color: #b4b4b4;
+	font-size: 13px;
+	display: block; /*display: block; => para ficar um em baixo do outro.*/
+	margin-top: 16px;
+	text-decoration: none;
+}
+
+/*pagina-sobre*/
+section.sobre-equipe{
+	padding: 40px 0;
+}
+
+section.sobre-equipe img { max-width: 100%; }
+
+
+.equipe-sobre-texto h2{
+	font-size: 45px; /*tamanho da fonte*/
+	color: #202020; /*cor da fonte*/
+	padding: 0 20px; /* zero (0) no espaçamento superior e inferior => 20px na esquerda e direita */
+}
+.equipe-sobre-texto p{
+	font-size: 16px; /*tamanho da fonte*/
+	line-height: 32px; /*line-height => espaçamento entre as linhas*/
+	color: #202020; /*cor da fonte*/
+	padding: 0 20px; /*espaçamento inferior e superior é zero (0) => e direta e esquerda 20px espaçamento*/
+}
+
+section.sobre-imagens{
+	padding: 100px 0;
+	background-color: #f4f9fd;
+}
+
+.sobre-imagens > .center{
+	display: flex; /*faz o alinhamento => um do lado do outro*/
+	flex-wrap: wrap;
+}
+
+.sobre-imagens img {
+	max-width: 100%; /*para garantir a responsividade*/
+}
+
+.sobre-imagens .img-sobre{
+	padding: 0 30px;
+	width: 25%;
+}
+
+/*inicio => pagina de contato*/
+ section.contato{
+ 	padding: 30px 0;
+ }
+
+ div.contato-info h2{
+ 	color: #202020;
+ 	font-size: 43px;
+ 	font-weight: normal;
+ }
+ .contato-info p{
+ 	color: #202020;
+ 	font-size: 15px;
+ 	margin-bottom: 10px; /*margin-bottom => distanciamento de cada item */
+ }
+
+ .mapa-container{
+ 	width: 100%; /*width: 100%; => vai pegar todo o container */
+ 	padding-top: 70%; /*padding-top: => deixar a altura igual a largura*/
+ 	/*quando uso padding-top: => o conteudo vai para baixo => então dou um position: relative; para poder maniular*/
+ 	position: relative; 
+ }
+
+ div#mapa{
+ 	position: absolute; /*position: absolute; => eu consigo manipular livrimente tudo do containner*/
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: gray;
+ }
+
+.contato-form {padding: 0 30px; margin-top: 30px; }
+ .contato-form input[type=text]{
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px; /*para não ficar um input grudado no outro*/
+    border: solid 1px #e3e3e3; /*controlando bordas => nesta caso (0) retirando*/
+    padding-left: 30px;
+    font-size: 16px;/*tecnica de design responsivo para quando entrar nos dispositivos moveis não dar o zoom*/
+    box-shadow: 0 2px 4px 0 rgba(92, 99, 110, 0.1); /*box-shadow: => cria um efeito no input*/
+ }
+ .contato-form select{
+ 	width: 100%;
+    height: 48px;
+    margin-bottom: 15px; /*para não ficar um input grudado no outro*/
+    border: solid 1px #e3e3e3; /*controlando bordas => nesta caso (0) retirando*/
+    padding-left: 8px;
+    font-size: 16px;/*tecnica de design responsivo para quando entrar nos dispositivos moveis não dar o zoom*/
+    box-shadow: 0 2px 4px 0 rgba(92, 99, 110, 0.1); /*box-shadow: => cria um efeito no input*/
+   
+ }
+ .contato-form textarea{
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px; /*para não ficar um input grudado no outro*/
+    border: solid 1px #e3e3e3; /*controlando bordas => nesta caso (0) retirando*/
+    padding: 30px;
+    font-size: 16px;/*tecnica de design responsivo para quando entrar nos dispositivos moveis não dar o zoom*/
+    box-shadow: 0 2px 4px 0 rgba(92, 99, 110, 0.1); /*box-shadow: => cria um efeito no input*/
+    resize: none; /* resize: none; => foi retirado a possibilidade do usuario aumentar o textarea*/
+}
+ .contato-form input[type=submit]{
+ 	width: 200px;
+ 	height: 50px;
+ 	border-radius: 5px;
+ 	box-shadow: 0 20px 30px 0 rgba(203, 203, 203, 0.2);
+ 	background-color: #212a97;
+ 	border:0; /*controlando a borda do botão => neste caso retirando a borda*/
+ 	cursor: pointer; /*colocar a mãozinha, mostrando que é clicavel*/
+ 	color: white;
+ 	font-size: 17px;
+ }
+/*fim => pagina de contato*/
+
+/*responsividade de tela*/
+@media screen and (max-width: 768px){
+	div.box-single-diferenciais{ width: 100%; } /*para acertar a imagem um em baixo do outro. mexemmos tambem =>  div.box-single-diferenciais img*/
+	.w50{ width: 100%; }
+	.img-time{margin-top:30px;}
+	.menu-desktop {display: none;}
+	.menu-mobile {display: block;}
+	.col-footer{
+		margin-bottom: 30px;
+		/*a nivel de prioridade o o html esta na frente => então eu coloco o !important => pois lá iniciamos a style*/
+		width: 100% !important; 
+		text-align: center !important;
+	}
+	section.sobre-equipe img{margin-top: 20px;} /*espaçamento do topo 20px;*/
+
+	.sobre-imagens .img-sobre{padding: 0 30px; width: 100%; text-align: center; margin-bottom: 20px;}
+}
+
+
+/*
+ ana.santos@faculdadeimpacta.com.br
+
+ copia
+
+ adriana.garcia@faculdadeimpacta.com.br
+
+
+ Pegar a conta luz => Conta luz
+*/
