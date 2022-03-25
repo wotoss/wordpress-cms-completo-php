@@ -504,6 +504,10 @@ section.sobre-imagens{
  }
 /*fim => pagina de contato*/
 
+section.erro-404{
+	padding: 30px 0;
+}
+
 /*responsividade de tela*/
 @media screen and (max-width: 768px){
 	div.box-single-diferenciais{ width: 100%; } /*para acertar a imagem um em baixo do outro. mexemmos tambem =>  div.box-single-diferenciais img*/

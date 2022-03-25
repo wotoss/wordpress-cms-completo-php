@@ -23,3 +23,38 @@ maps API => https://cursos7.com.br/como-gerar-uma-api-key-do-google-maps-para-o-
 
 Observação 
 Para o wordpress identificar o css ele precisa estar na raiz do tema.
+
+Para saber se um site é wordpress => f12 => wp-content
+
+Bases do Site
+=> head => fica informações de SEO e chamdas de link
+
+=> header. topo => fixo com o menu e titulo.
+
+=> conteudo => dinânmico.
+
+=> footer => fixo com o data e registros entre outros.
+
+*Lembrando que o wordpress não deleta direto, ele joga na lixeira, depois que deletamos.
+
+  <!--inicio => Teste conteudo da pagina-->
+    <section class="conteudo-da-pagina">
+    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+    	  the_content();
+    	  endwhile; else: ?>
+    	  <p>Sorry, no posts matched your criteria.</p>
+    	<?php endif; ?>
+    </section>
+    <!--fim => -->
+
+    Gerar minha chave no google maps => tentar tirar sublinhado do mapa.
+
+
+    O que  wordpress permite que manipulemos por padrão
+
+    $titulo = <?php the_title(); ?>
+
+    $conteudo = <?php the_content(); ?>
+
+
+    plugin usado por desenvolvedores wordpress => ACF=> Advanced Custom Fields.
