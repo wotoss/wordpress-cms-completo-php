@@ -18,9 +18,17 @@
      		<div class="w50 contato-info">
      			<h2>A mais importante, <br />primeira conversa.</h2>
      			<br />
-     			<p><b>Telefone:</b> (48) 9901-3620</p>
-     			<p><b>Telefone:</b> (11) 94704-7361</p>
-     			<p><b>Telefone:</b> (11) 9901-3620</p>
+                <?php
+                /*while => laço de repetição*/
+                /*(have_rows => busco o campo e em quanto eu tiver valor rodarei o loop*/
+                   while(have_rows('nome_tipo_contato')){
+                /*the_row => é para validar o worpress é um padrão do wordpress.*/
+                   the_row();    
+
+                 ?>
+                 <!--trago o nome do meu subfield-->
+     			<p><b><?php echo get_sub_field('categoria'); ?>:</b><?php echo get_sub_field('valor'); ?></p>
+     			<?php } ?>
 
      			<!--mapa dentro da sessão contatos-->
      		<div class="mapa-container">
